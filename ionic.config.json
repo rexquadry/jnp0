@@ -1,7 +1,10 @@
 {
-  "name": "jumpnpass",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react-vite"
+	"name": "jumpnpass",
+	"integrations": {
+		"capacitor": {}
+	},
+	"type": "react-vite",
+	"sass": {
+		"includePaths": ["./src/styles"]
+	}
 }

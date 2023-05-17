@@ -39,7 +39,8 @@ const CortexScanner: React.FC<any> = ({
 		await CortexDecoder.CDDecoder.init("/assets/cortexScan");
 		try {
 			await CortexDecoder.CDLicense.activateLicense(CORTEX_KEY);
-			// CortexDecoder.CDDevice.audio = true;
+			console.log("CDDevice:", CortexDecoder.CDDevice);
+			CortexDecoder.CDDevice.audio = true;
 		} catch (error) {
 			console.error(error);
 		}
@@ -174,6 +175,7 @@ const CortexScanner: React.FC<any> = ({
 				// report to the listener
 				resultCallback(serial, symbology, null);
 				console.log(serial, symbology);
+				console.log(CortexDecoder.CDDevice);
 				handleSubmitBarcode({ serial, symbology });
 				/* try {
 					playBeep();
